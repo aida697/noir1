@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOIR | THE COMPLETE ARCHIVE</title>
+    <link rel="icon" href="data:,">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@100;400;900&display=swap" rel="stylesheet">
     <style>
+     .ocean-img {
+    transition: opacity 1.4s ease, filter 1.4s ease, transform 2s ease;
+}
         :root { 
             --accent: #0047ff; 
             --bg: #030303; 
@@ -210,7 +214,13 @@
     <div id="main-site-wrapper">
         <section class="h-screen flex flex-col justify-center items-center relative px-6 overflow-hidden blue-gradient">
             <div class="absolute inset-8 opacity-20 overflow-hidden rounded-[20px]">
-                <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/51736c0d204546f59db1dcea121ecb59_9366/EQT_Zipped_Tracktop_Blue_KC1778_HM11.jpg" class="w-full h-full object-cover grayscale">
+                <img id="ocean-img-1"
+     class="ocean-img absolute inset-0 w-full h-full object-cover grayscale"
+     src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7483368312b14cf3be3f1297028ab136_9366/EQT_Zipped_Tracktop_Blue_KC1778_HM1.jpg">
+
+<img id="ocean-img-2"
+     class="ocean-img absolute inset-0 w-full h-full object-cover grayscale opacity-0"
+     src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/51736c0d204546f59db1dcea121ecb59_9366/EQT_Zipped_Tracktop_Blue_KC1778_HM11.jpg">
             </div>
             <h1 class="hero-text syne font-extrabold z-10 text-center">DEEP<br><span class="italic text-transparent" style="-webkit-text-stroke: 1px #0047ff;">OCEAN</span></h1>
         </section>
@@ -289,7 +299,7 @@
             </div>
         </section>
 
-        <section id="finale" class="h-[150vh] flex flex-col items-center justify-center transition-colors relative overflow-hidden" data-color="state-white">
+        <section id="finale" class="h-screen flex flex-col items-center justify-center transition-colors relative overflow-hidden" data-color="state-white">
             <div class="absolute inset-0 flex items-center justify-between px-10 md:px-40 pointer-events-none">
                 <img src="https://i.postimg.cc/Jnk3CLwT/image1.png" id="finale-left" class="h-[70vh] w-auto grayscale">
                 <img src="https://i.postimg.cc/ZRdPzSkG/image2.png" id="finale-right" class="h-[70vh] w-auto">
@@ -302,7 +312,7 @@
             </div>
         </section>
 
-        <footer class="py-20 text-center opacity-20 text-[10px] tracking-widest font-mono">NOIR ARCHIVE © 2026 // TBILISI_GEORGIA <a href="https://t.me/aida697" target="_blank">AIDA697</a></footer>
+        <footer class="py-6 -mt-10 text-center opacity-20 text-[10px] tracking-widest font-mono">NOIR ARCHIVE © 2026 // TBILISI_GEORGIA <a href="https://t.me/aida697" target="_blank">AIDA697</a></footer>
     </div>
 
     <div id="cart-drawer" class="flex flex-col h-full">
@@ -436,6 +446,48 @@
     </div>
 
     <script>
+
+let toggle = false;
+
+function startOceanShuffle() {
+    const img1 = document.getElementById("ocean-img-1");
+    const img2 = document.getElementById("ocean-img-2");
+
+    setInterval(() => {
+
+        if (toggle) {
+            gsap.to(img1, {
+                opacity: 1,
+                filter: "blur(0px) grayscale(100%)",
+                duration: 1.5
+            });
+
+            gsap.to(img2, {
+                opacity: 0,
+                filter: "blur(8px) grayscale(100%)",
+                duration: 1.5
+            });
+
+        } else {
+            gsap.to(img2, {
+                opacity: 1,
+                filter: "blur(0px) grayscale(100%)",
+                duration: 1.5
+            });
+
+            gsap.to(img1, {
+                opacity: 0,
+                filter: "blur(8px) grayscale(100%)",
+                duration: 1.5
+            });
+        }
+
+        toggle = !toggle;
+
+    }, 6000);
+}
+
+window.addEventListener("load", startOceanShuffle);
         gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
         let cart = [];
@@ -446,7 +498,8 @@
         let selectedSize = null;
 
         // DYNAMIC AUDIO LOGIC FOR ADD-TO-CART ENGINE
-        let archiveSound = new Audio();
+        const archiveSound = new Audio('./mixkit.mp3');
+        archiveSound.preload = 'auto';
         archiveSound.volume = 0.45;
 
         document.addEventListener('mousemove', (e) => {
@@ -586,9 +639,7 @@
                 initCursorHover();
               }}, 0.3);
 
-            // FORCE PRE-LOAD SECURE PERMISSIONS FOR THE SECOND SOUND ELEMENT
-            archiveSound.src = 'mixkit.mp3';
-            archiveSound.load();
+
 
             audio.play().catch(() => console.log("Audio blocked"));
             bars.forEach((bar, i) => {
@@ -696,10 +747,12 @@
             }
 
             // TRIGGER SOUND EFFECT MECHANICS
-            if (archiveSound) {
-                archiveSound.currentTime = 0;
-                archiveSound.play().catch((err) => console.log("Playback failed:", err));
-            }
+            archiveSound.pause();
+            archiveSound.currentTime = 0;
+            
+            archiveSound.play().catch(err => {
+                console.log("SFX error:", err);
+            });
 
             const item = {
                 title: document.getElementById('modal-title').innerText,
