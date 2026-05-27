@@ -11,9 +11,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@100;400;900&display=swap" rel="stylesheet">
     <style>
-     .ocean-img {
-    transition: opacity 1.4s ease, filter 1.4s ease, transform 2s ease;
-}
+        .ocean-img {
+            transition: opacity 1.4s ease, filter 1.4s ease, transform 2s ease;
+        }
         :root { 
             --accent: #0047ff; 
             --bg: #030303; 
@@ -168,7 +168,7 @@
         
         .cart-item { display: flex; gap: 20px; align-items: center; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
 
-        .custom-scrollbar::-webkit-scrollbar { width: 3px; }
+        .custom-scrollbar::-webkit-scrollbar { width: 3px; height: 3px; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
         .stop-scroll { overflow: hidden !important; }
     </style>
@@ -214,13 +214,8 @@
     <div id="main-site-wrapper">
         <section class="h-screen flex flex-col justify-center items-center relative px-6 overflow-hidden blue-gradient">
             <div class="absolute inset-8 opacity-20 overflow-hidden rounded-[20px]">
-                <img id="ocean-img-1"
-     class="ocean-img absolute inset-0 w-full h-full object-cover grayscale"
-     src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7483368312b14cf3be3f1297028ab136_9366/EQT_Zipped_Tracktop_Blue_KC1778_HM1.jpg">
-
-<img id="ocean-img-2"
-     class="ocean-img absolute inset-0 w-full h-full object-cover grayscale opacity-0"
-     src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/51736c0d204546f59db1dcea121ecb59_9366/EQT_Zipped_Tracktop_Blue_KC1778_HM11.jpg">
+                <img id="ocean-img-1" class="ocean-img absolute inset-0 w-full h-full object-cover grayscale" src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7483368312b14cf3be3f1297028ab136_9366/EQT_Zipped_Tracktop_Blue_KC1778_HM1.jpg">
+                <img id="ocean-img-2" class="ocean-img absolute inset-0 w-full h-full object-cover grayscale opacity-0" src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/51736c0d204546f59db1dcea121ecb59_9366/EQT_Zipped_Tracktop_Blue_KC1778_HM11.jpg">
             </div>
             <h1 class="hero-text syne font-extrabold z-10 text-center">DEEP<br><span class="italic text-transparent" style="-webkit-text-stroke: 1px #0047ff;">OCEAN</span></h1>
         </section>
@@ -231,13 +226,13 @@
 
         <section id="ocean" class="py-40 px-6 max-w-[1400px] mx-auto transition-colors" data-color="state-blue">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-20 items-center">
-                <div class="product-card aspect-[3/4] md:col-span-7" onclick="openProduct('EQT BLUE TRACKTOP', '490 ₾', 'High-performance recycled editorial environment fabric with distinctive signature asymmetric zipper layout mechanics.', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7483368312b14cf3be3f1297028ab136_9366/EQT_Zipped_Tracktop_Blue_KC1778_HM1.jpg')">
+                <div class="product-card aspect-[3/4] md:col-span-7" onclick="openProduct('EQT BLUE TRACKTOP', '490 ₾', 'High-performance recycled editorial environment fabric with distinctive signature asymmetric zipper layout mechanics.', ['https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7483368312b14cf3be3f1297028ab136_9366/EQT_Zipped_Tracktop_Blue_KC1778_HM1.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/f91e5ddf49854b428ab55b6151630ffa_9366/EQT_Zipped_Tracktop_Blue_KC1778_HM3_hover.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/8bf3cf70d6014f8ea27ef659c8137cd7_9366/EQT_Zipped_Tracktop_Blue_KC1778_HM6.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/c0bfa7c6664845c99740ee4411c6a475_9366/EQT_Zipped_Tracktop_Blue_KC1778_HM7.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7867c125bbfc42abb18f6812377b425e_9366/EQT_Zipped_Tracktop_Blue_KC1778_HM9.jpg'])">
                     <div class="price-float">490 ₾</div>
                     <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7483368312b14cf3be3f1297028ab136_9366/EQT_Zipped_Tracktop_Blue_KC1778_HM1.jpg">
                     <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/f91e5ddf49854b428ab55b6151630ffa_9366/EQT_Zipped_Tracktop_Blue_KC1778_HM3_hover.jpg" class="product-image-alt">
                 </div>
                 <div class="md:col-span-5 md:pt-32">
-                    <div class="product-card aspect-[4/5]" onclick="openProduct('TIRO TRACK JACKET', '390 ₾', 'Limited collaboration layout architecture styling featuring hyper-vibrant blue gradient thread counts.', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/9d6db486a82140838a34de35f4e298f9_9366/ADIDAS_x_FARM_RIO_HOUSE_OF_TIRO_TRACK_TOP_Blue_KD4635_HM1.jpg')">
+                    <div class="product-card aspect-[4/5]" onclick="openProduct('TIRO TRACK JACKET', '390 ₾', 'Limited collaboration layout architecture styling featuring hyper-vibrant blue gradient thread counts.', ['https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/9d6db486a82140838a34de35f4e298f9_9366/ADIDAS_x_FARM_RIO_HOUSE_OF_TIRO_TRACK_TOP_Blue_KD4635_HM1.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/17ee1a8559f44f8886b689f5844ce621_9366/ADIDAS_x_FARM_RIO_HOUSE_OF_TIRO_TRACK_TOP_Blue_KD4635_HM3_hover.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/0cf9b09fbd2c400daaffc3d9f1a8517d_9366/ADIDAS_x_FARM_RIO_HOUSE_OF_TIRO_TRACK_TOP_Blue_KD4635_HM7.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7494aed85c2541c88cb744b97e3f4c80_9366/ADIDAS_x_FARM_RIO_HOUSE_OF_TIRO_TRACK_TOP_Blue_KD4635_HM10.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/b7976980e6b7423ab89b4de4a6a950d9_9366/ADIDAS_x_FARM_RIO_HOUSE_OF_TIRO_TRACK_TOP_Blue_KD4635_HM8.jpg'])">
                         <div class="price-float">390 ₾</div>
                         <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/9d6db486a82140838a34de35f4e298f9_9366/ADIDAS_x_FARM_RIO_HOUSE_OF_TIRO_TRACK_TOP_Blue_KD4635_HM1.jpg">
                         <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/17ee1a8559f44f8886b689f5844ce621_9366/ADIDAS_x_FARM_RIO_HOUSE_OF_TIRO_TRACK_TOP_Blue_KD4635_HM3_hover.jpg" class="product-image-alt">
@@ -253,7 +248,7 @@
                     <h3 class="text-5xl syne font-bold mb-1 tracking-tighter">TENNIS SHORTS</h3>
                     <p class="text-[10px] font-mono opacity-40 uppercase tracking-[0.4em]">SPEC: KG3565 / DESIGN: Y-3</p>
                 </div>
-                <div class="product-card aspect-[3/4] order-1 md:order-2" onclick="openProduct('Y-3 TENNIS SHORTS', '280 ₾', 'Yohji Yamamoto signature sports capsule. Loose-fit breathable raw weave aesthetic.', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/8c7b52b410a4420abf3eb3ec95b12119_9366/Y-3_TENNIS_SHORTS_Black_KG3565_21_model.jpg')">
+                <div class="product-card aspect-[3/4] order-1 md:order-2" onclick="openProduct('Y-3 TENNIS SHORTS', '280 ₾', 'Yohji Yamamoto signature sports capsule. Loose-fit breathable raw weave aesthetic.', ['https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/8c7b52b410a4420abf3eb3ec95b12119_9366/Y-3_TENNIS_SHORTS_Black_KG3565_21_model.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/5c218ddf20794de9b39f59ea052d6f52_9366/Y-3_TENNIS_SHORTS_Black_KG3565_25_model_hover.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3990bf6440fc40da82fd5639b8c33117_9366/Y-3_TENNIS_SHORTS_Black_KG3565_41_detail.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/fe6520a55c0a44eb99dd623b471368ff_9366/Y-3_TENNIS_SHORTS_Black_KG3565_42_detail.jpg'])">
                     <div class="price-float">280 ₾</div>
                     <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/8c7b52b410a4420abf3eb3ec95b12119_9366/Y-3_TENNIS_SHORTS_Black_KG3565_21_model.jpg">
                     <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3990bf6440fc40da82fd5639b8c33117_9366/Y-3_TENNIS_SHORTS_Black_KG3565_41_detail.jpg" class="product-image-alt">
@@ -263,16 +258,16 @@
 
         <section id="denim" class="py-40 px-6 transition-colors" data-color="state-purple">
             <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="product-card aspect-[3/4]" onclick="openProduct('DENIM PANTS TYPE-A', '520 ₾', 'Oversized luxury weight structural dark indigo dyed denim cut trousers.', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/97ffab33510741f3a4bdc3feb6135617_9366/DENIM_TRACKPANTS_Black_KD3919_HM1.jpg')">
+                <div class="product-card aspect-[3/4]" onclick="openProduct('DENIM PANTS', '520 ₾', 'Oversized luxury weight structural dark indigo dyed denim cut trousers.', ['https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/97ffab33510741f3a4bdc3feb6135617_9366/DENIM_TRACKPANTS_Black_KD3919_HM1.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/2da2913858fc46f492af85802a0ef104_9366/DENIM_TRACKPANTS_Black_KD3919_HM4.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/c46e537afe21480ba08415f054974b40_9366/DENIM_TRACKPANTS_Black_KD3919_HM7.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/6a498f8356974a35be6b32da454440c4_9366/DENIM_TRACKPANTS_Black_KD3919_HM9.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3fef8f3048f043cf896935efeab2bd2d_9366/DENIM_TRACKPANTS_Black_KD3919_HM3_hover.jpg'])">
                     <div class="price-float">520 ₾</div>
                     <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/97ffab33510741f3a4bdc3feb6135617_9366/DENIM_TRACKPANTS_Black_KD3919_HM1.jpg">
                     <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3fef8f3048f043cf896935efeab2bd2d_9366/DENIM_TRACKPANTS_Black_KD3919_HM3_hover.jpg" class="product-image-alt">
                 </div>
-                <div class="product-card reveal-target aspect-[3/4] md:translate-y-20" onclick="openProduct('DENIM PANTS TYPE-B', '520 ₾', 'Rear pocket detail perspective showcasing contrast hardware stitches.', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/c46e537afe21480ba08415f054974b40_9366/DENIM_TRACKPANTS_Black_KD3919_HM7.jpg')">
+                <div class="product-card reveal-target aspect-[3/4] md:translate-y-20" onclick="openProduct('DENIM PANTS', '520 ₾', 'Rear pocket detail perspective showcasing contrast hardware stitches.', ['https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/c46e537afe21480ba08415f054974b40_9366/DENIM_TRACKPANTS_Black_KD3919_HM7.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/97ffab33510741f3a4bdc3feb6135617_9366/DENIM_TRACKPANTS_Black_KD3919_HM1.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/2da2913858fc46f492af85802a0ef104_9366/DENIM_TRACKPANTS_Black_KD3919_HM4.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/6a498f8356974a35be6b32da454440c4_9366/DENIM_TRACKPANTS_Black_KD3919_HM9.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3fef8f3048f043cf896935efeab2bd2d_9366/DENIM_TRACKPANTS_Black_KD3919_HM3_hover.jpg'])">
                     <div class="price-float">520 ₾</div>
                     <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/c46e537afe21480ba08415f054974b40_9366/DENIM_TRACKPANTS_Black_KD3919_HM7.jpg">
                 </div>
-                <div class="product-card aspect-[3/4]" onclick="openProduct('DENIM PANTS TYPE-C', '520 ₾', 'Linear bottom cuff detailing showing structured heavy falling shapes.', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/6a498f8356974a35be6b32da454440c4_9366/DENIM_TRACKPANTS_Black_KD3919_HM9.jpg')">
+                <div class="product-card aspect-[3/4]" onclick="openProduct('DENIM PANTS', '520 ₾', 'Linear bottom cuff detailing showing structured heavy falling shapes.', ['https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/6a498f8356974a35be6b32da454440c4_9366/DENIM_TRACKPANTS_Black_KD3919_HM9.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/97ffab33510741f3a4bdc3feb6135617_9366/DENIM_TRACKPANTS_Black_KD3919_HM1.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto/fl_lossy,c_fill,g_auto/2da2913858fc46f492af85802a0ef104_9366/DENIM_TRACKPANTS_Black_KD3919_HM4.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/c46e537afe21480ba08415f054974b40_9366/DENIM_TRACKPANTS_Black_KD3919_HM7.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3fef8f3048f043cf896935efeab2bd2d_9366/DENIM_TRACKPANTS_Black_KD3919_HM3_hover.jpg'])">
                     <div class="price-float">520 ₾</div>
                     <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/6a498f8356974a35be6b32da454440c4_9366/DENIM_TRACKPANTS_Black_KD3919_HM9.jpg">
                 </div>
@@ -283,14 +278,14 @@
             <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-end">
                 <div class="md:col-span-8">
                     <h3 class="ruby-text syne font-black italic text-rose-600 mb-10">RUBY<br><span class="text-white">CORE_v1</span></h3>
-                    <div class="product-card aspect-[3/4] md:w-[70%]" onclick="openProduct('FIREBIRD DENIM RED', '450 ₾', 'Heavyweight ruby red treated cotton blended canvas track top setup.', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7965e15aeb474150833954ba8b8dc510_9366/FIREBIRD_TRACK_TOP_DENIM_Red_KE8885_21_model.jpg')">
+                    <div class="product-card aspect-[3/4] md:w-[70%]" onclick="openProduct('FIREBIRD DENIM RED', '450 ₾', 'Heavyweight ruby red treated cotton blended canvas track top setup.', ['https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7965e15aeb474150833954ba8b8dc510_9366/FIREBIRD_TRACK_TOP_DENIM_Red_KE8885_21_model.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/64d4b59a2ac6429381b14be6b4da12de_9366/FIREBIRD_TRACK_TOP_DENIM_Red_KE8885_25_model.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/0c881dfb91d14b6392d770341608d63c_9366/FIREBIRD_TRACK_TOP_DENIM_Red_KE8885_41_detail.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/25db8616e2c144738ec75d00bc4a1b88_9366/FIREBIRD_TRACK_TOP_DENIM_Red_KE8885_42_detail.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/a7032050a3db4c26b4446b4bc2425e56_9366/FIREBIRD_TRACK_TOP_DENIM_Red_KE8885_23_hover_model.jpg'])">
                         <div class="price-float">450 ₾</div>
                         <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7965e15aeb474150833954ba8b8dc510_9366/FIREBIRD_TRACK_TOP_DENIM_Red_KE8885_21_model.jpg">
                         <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/a7032050a3db4c26b4446b4bc2425e56_9366/FIREBIRD_TRACK_TOP_DENIM_Red_KE8885_23_hover_model.jpg" class="product-image-alt">
                     </div>
                 </div>
                 <div class="md:col-span-4">
-                    <div class="product-card aspect-[3/4]" onclick="openProduct('CHILE RECONSTRUCTED JERSEY', '310 ₾', 'Deconstructed scarlet vintage panel execution football dynamic kit.', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7d25e7c071ab4c39acd4bc4dd360a152_9366/Chile_Reconstructed_Bringback_Jersey_Red_KD0968_HM1.jpg')">
+                    <div class="product-card aspect-[3/4]" onclick="openProduct('CHILE RECONSTRUCTED JERSEY', '310 ₾', 'Deconstructed scarlet vintage panel execution football dynamic kit.', ['https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7d25e7c071ab4c39acd4bc4dd360a152_9366/Chile_Reconstructed_Bringback_Jersey_Red_KD0968_HM1.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/f54e7a2f9ac949aa91a5b2c4f8a39a45_9366/Chile_Reconstructed_Bringback_Jersey_Red_KD0968_HM6.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3cf7d863ea1e4450865296ad98144e34_9366/Chile_Reconstructed_Bringback_Jersey_Red_KD0968_HM4.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/da4677103ad8470ab4fc786f1eedc616_9366/Chile_Reconstructed_Bringback_Jersey_Red_KD0968_HM10.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/8c54eb7e24df47c8a51dc661ec991582_9366/Chile_Reconstructed_Bringback_Jersey_Red_KD0968_HM9.jpg'])">
                         <div class="price-float">310 ₾</div>
                         <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7d25e7c071ab4c39acd4bc4dd360a152_9366/Chile_Reconstructed_Bringback_Jersey_Red_KD0968_HM1.jpg">
                         <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/03db7d3b63e5435d96beab6fe4179734_9366/Chile_Reconstructed_Bringback_Jersey_Red_KD0968_HM11.jpg" class="product-image-alt">
@@ -315,7 +310,7 @@
         <footer class="py-6 -mt-10 text-center opacity-20 text-[10px] tracking-widest font-mono">NOIR ARCHIVE © 2026 // TBILISI_GEORGIA <a href="https://t.me/aida697" target="_blank">AIDA697</a></footer>
     </div>
 
-    <div id="cart-drawer" class="flex flex-col h-full">
+    <div id="cart-drawer" class="custom-scrollbar flex flex-col h-full">
         <div class="flex justify-between items-center mb-6 border-b border-white/10 pb-6 shrink-0">
             <h2 class="syne text-2xl font-black italic">YOUR_ARCHIVE</h2>
             <button onclick="toggleCart()" class="text-xs opacity-50 hover:opacity-100 uppercase tracking-widest">CLOSE</button>
@@ -348,7 +343,7 @@
                         <h4 class="syne font-bold text-lg tracking-tight">EQT BLUE TRACKTOP</h4>
                         <p class="text-xs opacity-40 font-mono mt-1">490 ₾</p>
                     </div>
-                    <button onclick="openProduct('EQT BLUE TRACKTOP', '490 ₾', 'High-performance recycled editorial environment fabric with distinctive signature asymmetric zipper layout mechanics.', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7483368312b14cf3be3f1297028ab136_9366/EQT_Zipped_Tracktop_Blue_KC1778_HM1.jpg')" class="bg-white text-black text-[10px] px-6 py-3 rounded-full font-black hover:bg-blue-600 hover:text-white transition uppercase">Select Size</button>
+                    <button onclick="openProduct('EQT BLUE TRACKTOP', '490 ₾', 'High-performance recycled editorial environment fabric with distinctive signature asymmetric zipper layout mechanics.', ['https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7483368312b14cf3be3f1297028ab136_9366/EQT_Zipped_Tracktop_Blue_KC1778_HM1.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/f91e5ddf49854b428ab55b6151630ffa_9366/EQT_Zipped_Tracktop_Blue_KC1778_HM3_hover.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/8bf3cf70d6014f8ea27ef659c8137cd7_9366/EQT_Zipped_Tracktop_Blue_KC1778_HM6.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/c0bfa7c6664845c99740ee4411c6a475_9366/EQT_Zipped_Tracktop_Blue_KC1778_HM7.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7867c125bbfc42abb18f6812377b425e_9366/EQT_Zipped_Tracktop_Blue_KC1778_HM9.jpg'])" class="bg-white text-black text-[10px] px-6 py-3 rounded-full font-black hover:bg-blue-600 hover:text-white transition uppercase">Select Size</button>
                 </div>
             </div>
 
@@ -361,7 +356,7 @@
                         <h4 class="syne font-bold text-lg tracking-tight">TIRO TRACK JACKET</h4>
                         <p class="text-xs opacity-40 font-mono mt-1">390 ₾</p>
                     </div>
-                    <button onclick="openProduct('TIRO TRACK JACKET', '390 ₾', 'Limited collaboration layout architecture styling featuring hyper-vibrant blue gradient thread counts.', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/9d6db486a82140838a34de35f4e298f9_9366/ADIDAS_x_FARM_RIO_HOUSE_OF_TIRO_TRACK_TOP_Blue_KD4635_HM1.jpg')" class="bg-white text-black text-[10px] px-6 py-3 rounded-full font-black hover:bg-blue-600 hover:text-white transition uppercase">Select Size</button>
+                    <button onclick="openProduct('TIRO TRACK JACKET', '390 ₾', 'Limited collaboration layout architecture styling featuring hyper-vibrant blue gradient thread counts.', ['https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/9d6db486a82140838a34de35f4e298f9_9366/ADIDAS_x_FARM_RIO_HOUSE_OF_TIRO_TRACK_TOP_Blue_KD4635_HM1.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/17ee1a8559f44f8886b689f5844ce621_9366/ADIDAS_x_FARM_RIO_HOUSE_OF_TIRO_TRACK_TOP_Blue_KD4635_HM3_hover.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/0cf9b09fbd2c400daaffc3d9f1a8517d_9366/ADIDAS_x_FARM_RIO_HOUSE_OF_TIRO_TRACK_TOP_Blue_KD4635_HM7.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7494aed85c2541c88cb744b97e3f4c80_9366/ADIDAS_x_FARM_RIO_HOUSE_OF_TIRO_TRACK_TOP_Blue_KD4635_HM10.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/b7976980e6b7423ab89b4de4a6a950d9_9366/ADIDAS_x_FARM_RIO_HOUSE_OF_TIRO_TRACK_TOP_Blue_KD4635_HM8.jpg'])" class="bg-white text-black text-[10px] px-6 py-3 rounded-full font-black hover:bg-blue-600 hover:text-white transition uppercase">Select Size</button>
                 </div>
             </div>
 
@@ -374,7 +369,7 @@
                         <h4 class="syne font-bold text-lg tracking-tight">Y-3 TENNIS SHORTS</h4>
                         <p class="text-xs opacity-40 font-mono mt-1">280 ₾</p>
                     </div>
-                    <button onclick="openProduct('Y-3 TENNIS SHORTS', '280 ₾', 'Yohji Yamamoto signature sports capsule. Loose-fit breathable raw weave aesthetic.', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/8c7b52b410a4420abf3eb3ec95b12119_9366/Y-3_TENNIS_SHORTS_Black_KG3565_21_model.jpg')" class="bg-white text-black text-[10px] px-6 py-3 rounded-full font-black hover:bg-blue-600 hover:text-white transition uppercase">Select Size</button>
+                    <button onclick="openProduct('Y-3 TENNIS SHORTS', '280 ₾', 'Yohji Yamamoto signature sports capsule. Loose-fit breathable raw weave aesthetic.', ['https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/8c7b52b410a4420abf3eb3ec95b12119_9366/Y-3_TENNIS_SHORTS_Black_KG3565_21_model.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/5c218ddf20794de9b39f59ea052d6f52_9366/Y-3_TENNIS_SHORTS_Black_KG3565_25_model_hover.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3990bf6440fc40da82fd5639b8c33117_9366/Y-3_TENNIS_SHORTS_Black_KG3565_41_detail.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/fe6520a55c0a44eb99dd623b471368ff_9366/Y-3_TENNIS_SHORTS_Black_KG3565_42_detail.jpg'])" class="bg-white text-black text-[10px] px-6 py-3 rounded-full font-black hover:bg-blue-600 hover:text-white transition uppercase">Select Size</button>
                 </div>
             </div>
 
@@ -387,7 +382,7 @@
                         <h4 class="syne font-bold text-lg tracking-tight">DENIM PANTS TYPE-A</h4>
                         <p class="text-xs opacity-40 font-mono mt-1">520 ₾</p>
                     </div>
-                    <button onclick="openProduct('DENIM PANTS TYPE-A', '520 ₾', 'Oversized luxury weight structural dark indigo dyed denim cut trousers.', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/97ffab33510741f3a4bdc3feb6135617_9366/DENIM_TRACKPANTS_Black_KD3919_HM1.jpg')" class="bg-white text-black text-[10px] px-6 py-3 rounded-full font-black hover:bg-blue-600 hover:text-white transition uppercase">Select Size</button>
+                    <button onclick="openProduct('DENIM PANTS', '520 ₾', 'Oversized luxury weight structural dark indigo dyed denim cut trousers.', ['https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/97ffab33510741f3a4bdc3feb6135617_9366/DENIM_TRACKPANTS_Black_KD3919_HM1.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/2da2913858fc46f492af85802a0ef104_9366/DENIM_TRACKPANTS_Black_KD3919_HM4.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/c46e537afe21480ba08415f054974b40_9366/DENIM_TRACKPANTS_Black_KD3919_HM7.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/6a498f8356974a35be6b32da454440c4_9366/DENIM_TRACKPANTS_Black_KD3919_HM9.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3fef8f3048f043cf896935efeab2bd2d_9366/DENIM_TRACKPANTS_Black_KD3919_HM3_hover.jpg'])" class="bg-white text-black text-[10px] px-6 py-3 rounded-full font-black hover:bg-blue-600 hover:text-white transition uppercase">Select Size</button>
                 </div>
             </div>
 
@@ -400,7 +395,7 @@
                         <h4 class="syne font-bold text-lg tracking-tight">FIREBIRD DENIM RED</h4>
                         <p class="text-xs opacity-40 font-mono mt-1">450 ₾</p>
                     </div>
-                    <button onclick="openProduct('FIREBIRD DENIM RED', '450 ₾', 'Heavyweight ruby red treated cotton blended canvas track top setup.', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7965e15aeb474150833954ba8b8dc510_9366/FIREBIRD_TRACK_TOP_DENIM_Red_KE8885_21_model.jpg')" class="bg-white text-black text-[10px] px-6 py-3 rounded-full font-black hover:bg-blue-600 hover:text-white transition uppercase">Select Size</button>
+                    <button onclick="openProduct('FIREBIRD DENIM RED', '450 ₾', 'Heavyweight ruby red treated cotton blended canvas track top setup.', ['https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7965e15aeb474150833954ba8b8dc510_9366/FIREBIRD_TRACK_TOP_DENIM_Red_KE8885_21_model.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/64d4b59a2ac6429381b14be6b4da12de_9366/FIREBIRD_TRACK_TOP_DENIM_Red_KE8885_25_model.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/0c881dfb91d14b6392d770341608d63c_9366/FIREBIRD_TRACK_TOP_DENIM_Red_KE8885_41_detail.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/25db8616e2c144738ec75d00bc4a1b88_9366/FIREBIRD_TRACK_TOP_DENIM_Red_KE8885_42_detail.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/a7032050a3db4c26b4446b4bc2425e56_9366/FIREBIRD_TRACK_TOP_DENIM_Red_KE8885_23_hover_model.jpg'])" class="bg-white text-black text-[10px] px-6 py-3 rounded-full font-black hover:bg-blue-600 hover:text-white transition uppercase">Select Size</button>
                 </div>
             </div>
 
@@ -413,7 +408,7 @@
                         <h4 class="syne font-bold text-lg tracking-tight">CHILE JERSEY</h4>
                         <p class="text-xs opacity-40 font-mono mt-1">310 ₾</p>
                     </div>
-                    <button onclick="openProduct('CHILE RECONSTRUCTED JERSEY', '310 ₾', 'Deconstructed scarlet vintage panel execution football dynamic kit.', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7d25e7c071ab4c39acd4bc4dd360a152_9366/Chile_Reconstructed_Bringback_Jersey_Red_KD0968_HM1.jpg')" class="bg-white text-black text-[10px] px-6 py-3 rounded-full font-black hover:bg-blue-600 hover:text-white transition uppercase">Select Size</button>
+                    <button onclick="openProduct('CHILE RECONSTRUCTED JERSEY', '310 ₾', 'Deconstructed scarlet vintage panel execution football dynamic kit.', ['https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7d25e7c071ab4c39acd4bc4dd360a152_9366/Chile_Reconstructed_Bringback_Jersey_Red_KD0968_HM1.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/f54e7a2f9ac949aa91a5b2c4f8a39a45_9366/Chile_Reconstructed_Bringback_Jersey_Red_KD0968_HM6.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3cf7d863ea1e4450865296ad98144e34_9366/Chile_Reconstructed_Bringback_Jersey_Red_KD0968_HM4.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/da4677103ad8470ab4fc786f1eedc616_9366/Chile_Reconstructed_Bringback_Jersey_Red_KD0968_HM10.jpg', 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/8c54eb7e24df47c8a51dc661ec991582_9366/Chile_Reconstructed_Bringback_Jersey_Red_KD0968_HM9.jpg'])" class="bg-white text-black text-[10px] px-6 py-3 rounded-full font-black hover:bg-blue-600 hover:text-white transition uppercase">Select Size</button>
                 </div>
             </div>
         </div>
@@ -424,15 +419,20 @@
         <div class="relative bg-[#0a0a0a] w-full max-w-5xl rounded-[40px] overflow-hidden border border-white/10 shadow-2xl">
             <button onclick="closeProduct()" class="absolute top-6 right-8 z-50 text-xl font-light opacity-50 hover:opacity-100 transition">✕</button>
             <div class="flex flex-col md:flex-row w-full">
-                <div class="md:w-1/2 h-[400px] md:h-[600px] overflow-hidden">
-                    <img id="modal-img" src="" class="w-full h-full object-cover">
+                <div class="md:w-1/2 flex flex-col bg-black">
+                    <div class="h-[380px] md:h-[480px] overflow-hidden relative">
+                        <img id="modal-img" src="" class="w-full h-full object-cover">
+                    </div>
+                    <div id="modal-gallery-strip" class="h-[100px] border-t border-white/5 p-3 flex gap-3 justify-center overflow-x-auto custom-scrollbar bg-neutral-950/50">
+                        </div>
                 </div>
                 <div class="md:w-1/2 p-8 md:p-14 flex flex-col justify-center">
-                    <h2 id="modal-title" class="syne text-5xl font-black mb-4 italic tracking-tighter text-white"></h2>
-                    <p id="modal-price" class="text-blue-500 font-bold mb-8 text-xl font-mono"></p>
-                    <p id="modal-desc" class="text-sm opacity-50 leading-relaxed mb-10 font-light text-white"></p>
-                    <div class="mb-10">
-                        <span class="text-[9px] tracking-[0.4em] opacity-30 block mb-6 uppercase text-white">ARCHIVE_SIZE</span>
+                    <h2 id="modal-title" class="syne text-4xl font-black mb-3 italic tracking-tighter text-white"></h2>
+                    <p id="modal-price" class="text-blue-500 font-bold mb-6 text-xl font-mono"></p>
+                    <p id="modal-desc" class="text-sm opacity-50 leading-relaxed mb-8 font-light text-white"></p>
+                    
+                    <div class="mb-8">
+                        <span class="text-[9px] tracking-[0.4em] opacity-30 block mb-4 uppercase text-white">ARCHIVE_SIZE</span>
                         <div class="flex gap-4" id="size-container">
                             <button class="size-btn w-14 h-14 rounded-2xl border border-white/10 hover:border-white transition text-xs font-bold text-white">S</button>
                             <button class="size-btn w-14 h-14 rounded-2xl border border-white/10 hover:border-white transition text-xs font-bold text-white">M</button>
@@ -446,48 +446,25 @@
     </div>
 
     <script>
+        let toggle = false;
 
-let toggle = false;
+        function startOceanShuffle() {
+            const img1 = document.getElementById("ocean-img-1");
+            const img2 = document.getElementById("ocean-img-2");
 
-function startOceanShuffle() {
-    const img1 = document.getElementById("ocean-img-1");
-    const img2 = document.getElementById("ocean-img-2");
-
-    setInterval(() => {
-
-        if (toggle) {
-            gsap.to(img1, {
-                opacity: 1,
-                filter: "blur(0px) grayscale(100%)",
-                duration: 1.5
-            });
-
-            gsap.to(img2, {
-                opacity: 0,
-                filter: "blur(8px) grayscale(100%)",
-                duration: 1.5
-            });
-
-        } else {
-            gsap.to(img2, {
-                opacity: 1,
-                filter: "blur(0px) grayscale(100%)",
-                duration: 1.5
-            });
-
-            gsap.to(img1, {
-                opacity: 0,
-                filter: "blur(8px) grayscale(100%)",
-                duration: 1.5
-            });
+            setInterval(() => {
+                if (toggle) {
+                    gsap.to(img1, { opacity: 1, filter: "blur(0px) grayscale(100%)", duration: 1.5 });
+                    gsap.to(img2, { opacity: 0, filter: "blur(8px) grayscale(100%)", duration: 1.5 });
+                } else {
+                    gsap.to(img2, { opacity: 1, filter: "blur(0px) grayscale(100%)", duration: 1.5 });
+                    gsap.to(img1, { opacity: 0, filter: "blur(8px) grayscale(100%)", duration: 1.5 });
+                }
+                toggle = !toggle;
+            }, 6000);
         }
 
-        toggle = !toggle;
-
-    }, 6000);
-}
-
-window.addEventListener("load", startOceanShuffle);
+        window.addEventListener("load", startOceanShuffle);
         gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
         let cart = [];
@@ -497,16 +474,12 @@ window.addEventListener("load", startOceanShuffle);
         audio.volume = 0.15;
         let selectedSize = null;
 
-        // DYNAMIC AUDIO LOGIC FOR ADD-TO-CART ENGINE
         const archiveSound = new Audio('./mixkit.mp3');
         archiveSound.preload = 'auto';
         archiveSound.volume = 0.45;
 
         document.addEventListener('mousemove', (e) => {
-            gsap.set("#cursor", { 
-                x: e.clientX, 
-                y: e.clientY 
-            });
+            gsap.set("#cursor", { x: e.clientX, y: e.clientY });
 
             const heroFace = document.getElementById('hero-face');
             if (heroFace && window.getComputedStyle(document.getElementById('enter-overlay')).display !== 'none') {
@@ -517,14 +490,10 @@ window.addEventListener("load", startOceanShuffle);
         });
 
         function initCursorHover() {
-            const genericElements = document.querySelectorAll('button, a, .size-btn, [onclick], nav div');
+            const genericElements = document.querySelectorAll('button, a, .size-btn, .thumb-btn, [onclick], nav div');
             genericElements.forEach(el => {
-                el.addEventListener('mouseenter', () => {
-                    gsap.to("#cursor", { width: 40, height: 40, duration: 0.3 });
-                });
-                el.addEventListener('mouseleave', () => {
-                    gsap.to("#cursor", { width: 12, height: 12, duration: 0.3 });
-                });
+                el.addEventListener('mouseenter', () => { gsap.to("#cursor", { width: 40, height: 40, duration: 0.3 }); });
+                el.addEventListener('mouseleave', () => { gsap.to("#cursor", { width: 12, height: 12, duration: 0.3 }); });
             });
 
             const products = document.querySelectorAll('.product-card');
@@ -547,63 +516,27 @@ window.addEventListener("load", startOceanShuffle);
                 letterSpacing: "0.12em",
                 opacity: 0.1,
                 scale: 0.95,
-                scrollTrigger: {
-                    trigger: ".blue-gradient",
-                    start: "top top",
-                    end: "bottom top",
-                    scrub: true
-                }
+                scrollTrigger: { trigger: ".blue-gradient", start: "top top", end: "bottom top", scrub: true }
             });
 
             gsap.to(".blue-gradient img", {
-                yPercent: 12,
-                scale: 1.05,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: ".blue-gradient",
-                    start: "top top",
-                    end: "bottom top",
-                    scrub: true
-                }
+                yPercent: 12, scale: 1.05, ease: "none",
+                scrollTrigger: { trigger: ".blue-gradient", start: "top top", end: "bottom top", scrub: true }
             });
 
             gsap.utils.toArray('.product-card').forEach(card => {
                 gsap.fromTo(card, 
                     { opacity: 0, y: 50 },
-                    { 
-                        opacity: 1, 
-                        y: 0, 
-                        duration: 1.4, 
-                        ease: "power4.out",
-                        scrollTrigger: {
-                            trigger: card,
-                            start: "top 88%", 
-                            toggleActions: "play none none none" 
-                        }
-                    }
+                    { opacity: 1, y: 0, duration: 1.4, ease: "power4.out", scrollTrigger: { trigger: card, start: "top 88%", toggleActions: "play none none none" } }
                 );
             });
 
             gsap.to(".bg-text-layer", {
                 xPercent: -25,
-                scrollTrigger: {
-                    trigger: "#minimal",
-                    start: "top bottom",
-                    end: "bottom top",
-                    scrub: 0.5
-                }
+                scrollTrigger: { trigger: "#minimal", start: "top bottom", end: "bottom top", scrub: 0.5 }
             });
 
-            const finaleTimeline = gsap.timeline({
-                scrollTrigger: {
-                    trigger: "#finale",
-                    start: "top top",
-                    end: "bottom bottom",
-                    scrub: 1, 
-                    pin: true 
-                }
-            });
-
+            const finaleTimeline = gsap.timeline({ scrollTrigger: { trigger: "#finale", start: "top top", end: "bottom bottom", scrub: 1, pin: true } });
             finaleTimeline
                 .fromTo("#finale-left", { xPercent: -40, opacity: 0 }, { xPercent: 0, opacity: 0.6, ease: "none" }, 0)
                 .fromTo("#finale-right", { xPercent: 40, opacity: 0 }, { xPercent: 0, opacity: 1, ease: "none" }, 0)
@@ -612,8 +545,7 @@ window.addEventListener("load", startOceanShuffle);
 
         document.querySelectorAll('section[data-color]').forEach((section) => {
             ScrollTrigger.create({
-                trigger: section, 
-                start: "top 50%",
+                trigger: section, start: "top 50%",
                 onEnter: () => document.body.className = section.getAttribute('data-color'),
                 onEnterBack: () => document.body.className = section.getAttribute('data-color'),
             });
@@ -633,13 +565,10 @@ window.addEventListener("load", startOceanShuffle);
               .to("#enter-overlay", { y: "-100%", duration: 1.5, ease: "power4.inOut", onComplete: () => {
                 document.getElementById('enter-overlay').style.display = 'none';
                 document.body.classList.remove('overflow-hidden');
-                
                 initScrollAnimations();
                 ScrollTrigger.refresh();
                 initCursorHover();
               }}, 0.3);
-
-
 
             audio.play().catch(() => console.log("Audio blocked"));
             bars.forEach((bar, i) => {
@@ -648,7 +577,8 @@ window.addEventListener("load", startOceanShuffle);
             });
         }
 
-        function openProduct(title, price, desc, img) {
+    
+        function openProduct(title, price, desc, imgArray) {
             document.body.classList.add('stop-scroll');
             selectedSize = null;
             
@@ -659,7 +589,36 @@ window.addEventListener("load", startOceanShuffle);
             document.getElementById('modal-title').innerText = title;
             document.getElementById('modal-price').innerText = price;
             document.getElementById('modal-desc').innerText = desc;
-            document.getElementById('modal-img').src = img;
+            
+            const images = Array.isArray(imgArray) ? imgArray : [imgArray];
+            const mainImgElement = document.getElementById('modal-img');
+            mainImgElement.src = images[0];
+
+   
+            const strip = document.getElementById('modal-gallery-strip');
+            strip.innerHTML = "";
+            
+
+            strip.className = "h-[100px] border-t border-white/5 p-3 flex gap-3 justify-center overflow-x-auto custom-scrollbar bg-neutral-950/50";
+            
+            images.forEach((imgUrl, idx) => {
+                const thumbBtn = document.createElement('button');
+                thumbBtn.className = `thumb-btn h-full aspect-square rounded-xl overflow-hidden border shrink-0 transition duration-300 ${idx === 0 ? 'border-white opacity-100' : 'border-white/10 opacity-40 hover:opacity-80'}`;
+                thumbBtn.innerHTML = `<img src="${imgUrl}" class="w-full h-full object-cover">`;
+                
+                thumbBtn.addEventListener('click', function() {
+                    document.querySelectorAll('.thumb-btn').forEach(b => {
+                        b.classList.add('border-white/10', 'opacity-40');
+                        b.classList.remove('border-white', 'opacity-100');
+                    });
+                    this.classList.remove('border-white/10', 'opacity-40');
+                    this.classList.add('border-white', 'opacity-100');
+                    
+                    gsap.fromTo(mainImgElement, { opacity: 0.4 }, { opacity: 1, duration: 0.4, ease: "power2.out" });
+                    mainImgElement.src = imgUrl;
+                });
+                strip.appendChild(thumbBtn);
+            });
 
             const modal = document.getElementById('product-modal');
             modal.classList.remove('hidden');
@@ -746,13 +705,9 @@ window.addEventListener("load", startOceanShuffle);
                 return;
             }
 
-            // TRIGGER SOUND EFFECT MECHANICS
             archiveSound.pause();
             archiveSound.currentTime = 0;
-            
-            archiveSound.play().catch(err => {
-                console.log("SFX error:", err);
-            });
+            archiveSound.play().catch(err => console.log("SFX error:", err));
 
             const item = {
                 title: document.getElementById('modal-title').innerText,
